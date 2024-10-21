@@ -1,10 +1,11 @@
 package Utility;
 
 public class MyFunc {
-    public static void main(String[] args) {
+    public static void Bekle(int sn) {
+
 
         try {
-            Thread.sleep(3000);
+            Thread.sleep(1000*sn);
         } catch (InterruptedException e) {
             throw new RuntimeException(e);
         }

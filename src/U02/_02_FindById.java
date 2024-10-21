@@ -29,6 +29,7 @@ public class _02_FindById {
 
         //request a browser information
         driver.getTitle();
+        System.out.println(driver.getTitle());
 
         //waiting
         //Synchronizing the code with the current state of the browser is
