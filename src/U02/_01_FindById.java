@@ -8,7 +8,7 @@ import org.openqa.selenium.chrome.ChromeOptions;
 
 import java.time.Duration;
 
-public class _02_FindById {
+public class _01_FindById {
     public static void main(String[] args) {
 
         /*
