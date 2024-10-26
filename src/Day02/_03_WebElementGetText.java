@@ -1,4 +1,4 @@
-package U02;
+package Day02;
 
 import Utility.MyFunc;
 import org.openqa.selenium.By;

@@ -1,4 +1,4 @@
-package U02;
+package Day02;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
