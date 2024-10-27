@@ -1,0 +1,4 @@
+LOCATOR BULMA:
+1- id  # diyez id lerde arar
+2- name
+3- class . nokta class larda arar

@@ -31,9 +31,15 @@ public class _04_FindingByName {
         WebElement submitButton=driver.findElement(By.id("input_2"));
         submitButton.click();
 
+       //MyFunc.Bekle(3);
 
+        try{
+            Thread.sleep(3);
+        }
+        catch (InterruptedException e){
+            throw new RuntimeException(e);
+        }
 
-        MyFunc.Bekle(3);
         driver.quit();
 
 
