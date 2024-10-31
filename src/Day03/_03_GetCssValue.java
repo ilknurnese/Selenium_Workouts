@@ -19,6 +19,7 @@ public class _03_GetCssValue {
         // parametlerin değerlerini veriyor
         System.out.println("searchBox.getAttribute(\"class\") = " + searchBox.getAttribute("class"));
 
+
         //provides the values that shapes the elements
         // elementi şekillendiren değerleri veriyor
         System.out.println("searchBox.getCssValue(\"color\") = " + searchBox.getCssValue("color"));
