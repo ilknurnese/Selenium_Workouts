@@ -34,7 +34,7 @@ public class _04_FindingByName {
        //MyFunc.Bekle(3);
 
         try{
-            Thread.sleep(3);
+            Thread.sleep(3*1000);
         }
         catch (InterruptedException e){
             throw new RuntimeException(e);
