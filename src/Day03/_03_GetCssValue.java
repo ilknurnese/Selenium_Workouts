@@ -16,12 +16,12 @@ public class _03_GetCssValue {
         WebElement searchBox= driver.findElement(By.id("inputValEnter"));
 
         //provides value of the parameter
-        // parametlerin değerlerini veriyor
+
         System.out.println("searchBox.getAttribute(\"class\") = " + searchBox.getAttribute("class"));
 
 
         //provides the values that shapes the elements
-        // elementi şekillendiren değerleri veriyor
+
         System.out.println("searchBox.getCssValue(\"color\") = " + searchBox.getCssValue("color"));
         System.out.println("searchBox.getCssValue(\"background\") = " + searchBox.getCssValue("background"));
         System.out.println("searchBox.getCssValue(\"font-size\") = " + searchBox.getCssValue("font-size"));
