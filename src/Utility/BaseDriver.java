@@ -7,10 +7,11 @@ import java.time.Duration;
 
 public class BaseDriver {
 
+    //
     public static WebDriver driver;
 
-
-    public static void Setup()
+    //public static void Setup()
+    static
     {
         driver=new ChromeDriver();
 
