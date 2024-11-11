@@ -6,104 +6,104 @@ attributes, classes, IDs, hierarchical structure, and more.
 
 Here are some common CSS selector patterns and examples:
 
-### 1. Selecting by ID
+  1. Selecting by ID
 Use the `#` symbol followed by the element’s ID.
-```css
+css
 #elementID
-```
-**Example:**
-```java
+
+Example:
+java
 driver.findElement(By.cssSelector("#submitButton"));
-```
 
-### 2. Selecting by Class
+
+  2. Selecting by Class
 Use a `.` followed by the class name. If an element has multiple classes, you can use any one of them.
-```css
+css
 .className
-```
-**Example:**
-```java
+
+Example:
+java
 driver.findElement(By.cssSelector(".buttonClass"));
-```
 
-### 3. Selecting by Attribute
+
+ 3. Selecting by Attribute
 Use square brackets `[]` to match an attribute and its value.
-```css
+css
 [tagName[attribute='value']]
-```
-**Example:** Select an element with `type="submit"`.
-```java
+
+Example: Select an element with `type="submit"`.
+java
 driver.findElement(By.cssSelector("input[type='submit']"));
-```
 
-### 4. Selecting by Multiple Attributes
+
+ 4. Selecting by Multiple Attributes
 You can combine multiple attributes in one selector.
-```css
+css
 [tagName[attribute1='value1'][attribute2='value2']]
-```
-**Example:**
-```java
+
+Example:
+java
 driver.findElement(By.cssSelector("input[type='submit'][name='submitButton']"));
-```
 
-### 5. Selecting by Class and Attribute
+
+ 5. Selecting by Class and Attribute
 You can also combine a class and an attribute.
-```css
+css
 .className[attribute='value']
-```
-**Example:**
-```java
+
+Example:
+java
 driver.findElement(By.cssSelector(".buttonClass[type='submit']"));
-```
 
-### 6. Using Descendant Selector
+
+ 6. Using Descendant Selector
 Selects elements within a parent-child hierarchy.
-```css
+css
 parent child
-```
-**Example:** Selects any `<span>` inside a `<div>`.
-```java
+
+Example: Selects any `<span>` inside a `<div>`.
+java
 driver.findElement(By.cssSelector("div span"));
-```
 
-### 7. Direct Child Selector
+
+ 7. Direct Child Selector
 Use `>` to select only direct children of a parent element.
-```css
+css
 parent > child
-```
-**Example:** Selects direct `<span>` children of a `<div>`.
-```java
+
+Example: Selects direct `<span>` children of a `<div>`.
+java
 driver.findElement(By.cssSelector("div > span"));
-```
 
-### 8. Using Pseudo-classes
+
+ 8. Using Pseudo-classes
 CSS pseudo-classes like `:nth-child`, `:first-child`, and `:last-child` help you select elements based on their position.
-```css
+css
 element:nth-child(n)
-```
-**Example:** Select the third `<li>` in a list.
-```java
-driver.findElement(By.cssSelector("ul li:nth-child(3)"));
-```
 
-### 9. Selecting Elements with Partial Attribute Values
+Example: Select the third `<li>` in a list.
+java
+driver.findElement(By.cssSelector("ul li:nth-child(3)"));
+
+
+ 9. Selecting Elements with Partial Attribute Values
 Use `*=` for partial match, `^=` for "starts with", and `$=` for "ends with".
-```css
+css
 [attr*='partialValue']   /* Contains partial value */
 [attr^='startValue']     /* Starts with a specific value */
 [attr$='endValue']       /* Ends with a specific value */
-```
+
 **Examples:**
-```java
+java
 driver.findElement(By.cssSelector("a[href*='example']"));      // Contains 'example' in href
 driver.findElement(By.cssSelector("input[name^='user']"));     // Starts with 'user'
 driver.findElement(By.cssSelector("input[name$='name']"));     // Ends with 'name'
-```
 
-### Example Usage in Selenium
+
+ Example Usage in Selenium
 Here’s an example where we use a CSS selector to find a submit button by its class and type:
-```java
+java
 driver.findElement(By.cssSelector("button.submitButton[type='submit']")).click();
-```
+
 
 These are some of the main CSS selector patterns in Selenium. By combining these techniques, you can create highly specific selectors for identifying elements on the page.
