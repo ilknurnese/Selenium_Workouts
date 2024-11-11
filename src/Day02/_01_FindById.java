@@ -12,7 +12,7 @@ public class _01_FindById {
     public static void main(String[] args) {
 
         /*
-        1 - open the web site https://form.jotform.com/221934510376353
+        1 - open the website https://form.jotform.com/221934510376353
         2- write Neşe to first name text area
         3- write Tuncal to last name  text area
 
