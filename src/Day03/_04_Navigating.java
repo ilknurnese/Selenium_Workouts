@@ -14,22 +14,23 @@ public class _04_Navigating extends BaseDriver {
         driver.navigate().to("https://testpages.herokuapp.com/styled/index.html");
 
         System.out.println("driver.getTitle() = " + driver.getTitle());
-        System.out.println("args = " + driver.getCurrentUrl());
+        System.out.println("driver.getCurrentUrl = " + driver.getCurrentUrl());
+        MyFunc.Bekle(2);
 
-
-        WebElement linkAlert=driver.findElement(By.id("alerttest"));
+        WebElement linkAlert = driver.findElement(By.id("alerttest"));
         linkAlert.click();
-
         System.out.println("driver.getTitle() = " + driver.getTitle());
-        System.out.println("args = " + driver.getCurrentUrl());
+        System.out.println("driver.getCurrentUrl = " + driver.getCurrentUrl());
+        MyFunc.Bekle(2);
 
         driver.navigate().back();
         System.out.println("driver.getTitle() = " + driver.getTitle());
-        System.out.println("args = " + driver.getCurrentUrl());
+        System.out.println("driver.getCurrentUrl = " + driver.getCurrentUrl());
+        MyFunc.Bekle(2);
 
         driver.navigate().forward();
         System.out.println("driver.getTitle() = " + driver.getTitle());
-        System.out.println("args = " + driver.getCurrentUrl());
+        System.out.println("driver.getCurrentUrl = " + driver.getCurrentUrl());
 
         TearDown();
 
