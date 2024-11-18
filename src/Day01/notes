@@ -1,4 +1,219 @@
-LOCATOR BULMA:
-1- id  # diyez id lerde arar
-2- name
-3- class . nokta class larda arar
+Selenium is an umbrella project for a range of tools and libraries that enable and support the automation of
+web browsers.
+
+Selenium is a portable framework for software testing.
+Selenium tool facilitates with a playback tool for authoring functional tests without the need to learn a test scripting language
+
+Selenium is one of the most widely used open source Web UI (User Interface) automation testing suites.
+Selenium supports automation across different browsers, platforms and programming languages.
+
+
+
+
+Selenium can be easily deployed on platforms such as Windows, Linux, Solaris and Macintosh.
+Moreover, it supports OS (Operating System) for mobile applications like iOS, windows mobile and android.
+
+Selenium supports a variety of programming languages through the use of drivers specific to each language.
+Languages supported by Selenium include C#, Java, Perl, PHP, Python and Ruby.
+Currently, Selenium Web driver is most popular with Java and C#.
+Selenium test scripts can be coded in any of the supported programming languages
+and can be run directly in most modern web browsers.
+Browsers supported by Selenium include Internet Explorer, Mozilla Firefox, Google Chrome and Safari.
+
+Selenium can be used to automate functional tests and can be integrated with automation test tools such as
+Maven, Jenkins, & Docker to achieve continuous testing.
+It can also be integrated with tools such as
+TestNG, & JUnit for managing test cases and generating reports.
+
+
+Selenium Features
+
+* Selenium is an open source and portable Web testing Framework.
+
+* Selenium IDE provides a playback and record feature for authoring tests without the need to
+  learn a test scripting language.
+
+* It can be considered as the leading cloud-based testing platform
+  which helps testers to record their actions and export them as a reusable script
+  with a simple-to-understand and easy-to-use interface.
+
+* Selenium supports various operating systems, browsers and programming languages. Following is the list:
+ - Programming Languages: C#, Java, Python, PHP, Ruby, Perl, and JavaScript
+ - Operating Systems: Android, iOS, Windows, Linux, Mac, Solaris.
+ - Browsers: Google Chrome, Mozilla Firefox, Internet Explorer, Edge, Opera, Safari, etc.
+
+* It also supports parallel test execution which reduces time and increases the efficiency of tests.
+
+* Selenium can be integrated with frameworks like Ant and Maven for source code compilation.
+
+* Selenium can also be integrated with testing frameworks like
+  TestNG for application testing and generating reports.
+
+* Selenium requires fewer resources as compared to other automation test tools.
+
+* WebDriver API has been indulged in selenium which is one of the most important modifications done to selenium.
+
+* Selenium web driver does not require server installation, test scripts interact directly with the browser.
+
+* Selenium commands are categorized in terms of different classes which make it easier to understand and implement.
+
+* Selenium Remote Control (RC) in conjunction with WebDriver API is known as Selenium 2.0.
+  This version was built to support the vibrant web pages and Ajax.
+
+
+Selenium Limitations
+
+* Selenium does not support automation testing for desktop applications.
+
+* Selenium requires high skill sets in order to automate tests more effectively.
+
+* Since Selenium is open source software, you have to rely on community forums to get your technical issues resolved.
+
+* We can't perform automation tests on web services like SOAP or REST using Selenium.
+
+* We should know at least one of the supported programming languages to create tests scripts in Selenium WebDriver.
+
+* It does not have built-in Object Repository like UTF/QTP to maintain objects/elements in centralized location.
+However, we can overcome this limitation using Page Object Model.
+
+* Selenium does not have any inbuilt reporting capability;
+  you have to rely on plug-ins like JUnit and TestNG for test reports.
+
+* It is not possible to perform testing on images.
+  We need to integrate Selenium with Sikuli for image based testing.
+
+ * Creating test environment in Selenium takes more time as compared to vendor tools
+   like UFT, RFT, Silk test, etc.
+
+* No one is responsible for new features usage; they may or may not work properly.
+
+* Selenium does not provide any test tool integration for Test Management.
+
+
+_______
+
+Selenium Tool Suite
+Selenium is not just a single tool but a suite of software,
+each with a different approach to support automation testing.
+It comprises of four major components which include:
+
+Selenium Integrated Development Environment (IDE)
+Selenium Remote Control (Now Deprecated)
+WebDriver
+Selenium Grid
+
+Selenium Tool Suite
+1.Selenium Integrated Development Environment (IDE)
+Selenium IDE is implemented as Firefox extension which provides record and playback functionality on test scripts. It allows testers to export recorded scripts in many languages like HTML, Java, Ruby, RSpec, Python, C#, JUnit and TestNG. You can use these exported script in Selenium RC or Webdriver.
+
+>Selenium IDE has limited scope and the generated test scripts are not very robust and portable.
+
+2. Selenium Remote Control
+Selenium RC (officially deprecated by selenium)allows testers to write automated web application UI test in any of the supported programming languages. It also involves an HTTP proxy server which enables the browser to believe that the web application being tested comes from the domain provided by proxy server.
+
+
+Selenium RC comes with two components.
+
+Selenium RC Server (acts as a HTTP proxy for web requests).
+>
+Selenium RC Client (library containing your programming language code).
+The figure given below shows the architectural representation of Selenium RC.
+
+Selenium Tool Suite
+Selenium RC had been considered quite effective for testing complex AJAX-based web user interfaces
+under a Continuous Integration System.
+
+3. Selenium WebDriver
+Selenium WebDriver (Selenium 2) is the successor to Selenium RC and is by far the most important component of
+Selenium Suite.
+Selenium WebDriver provides a programming interface to create and execute test cases.
+Test scripts are written in order to identify web elements on web pages and
+then desired actions are performed on those elements.
+
+Selenium WebDriver performs much faster as compared to Selenium RC
+because it makes direct calls to the web browsers.
+RC on the other hand needs an RC server to interact with the web browser.
+
+Since, WebDriver directly calls the methods of different browsers
+hence we have separate driver for each browser. Some of the most widely used web drivers include:
+
+Mozilla Firefox Driver (Gecko Driver)
+Google Chrome Driver
+Internet Explorer Driver
+Opera Driver
+Safari Driver
+HTML Unit Driver (a special headless driver)
+
+Note:Selenium version 2 merged the best features of Selenium RC and Selenium WebDriver into Selenium WebDriver.
+The latest release Selenium 3 has new added features and functionalities
+
+4. Selenium Grid
+Selenium Grid is also an important component of Selenium Suite
+which allows us to run our tests on different machines against different browsers in parallel.
+In simple words, we can run our tests simultaneously on different machines running different browsers
+and operating systems.
+
+Selenium Grid follows the Hub-Node Architecture to achieve parallel execution of test scripts.
+The Hub is considered as master of the network and the other will be the nodes.
+Hub controls the execution of test scripts on various nodes of the network.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Selenium Questions and Answers
+1. How Many Types of Locators Are There in Selenium? In Which Order Do You Prefer?
+There are 8 types of locators in Selenium:
+1. id  (# is used to search in IDs)
+2. name
+3. className   (. is used to search in classes)
+4. tagName
+5. linkText
+6. partialLinkText
+7. cssSelector
+8. xpath
+
+Order of preference:
+- id: It is the fastest and most reliable option, it is unique.
+- name: It is preferred if it is unique and fixed.
+- cssSelector: It is faster than xpath in terms of performance.
+- xpath: It is more flexible but relatively slow.
+- Others are usually used in special cases.
+2. What is the Difference Between driver.quit and driver.close?
+- driver.quit: Closes all browser windows and ends the WebDriver session.
+- driver.close: Closes only the active browser window. However, other sessions continue to work.
+3. What is the difference between driver.navigate.to and driver.get?
+- driver.get: Redirects to a URL and waits for the page to fully load.
+- driver.navigate.to: Redirects to a URL in the same way, but offers more navigation controls (like back, forward, or refresh).
+
+4. What is the method to get the text of an element?
+- getText(): The `element.getText()` method returns the visible text value of an element.
+
+5. What is the method to get the attribute of an element?
+- getAttribute(): It is used as `element.getAttribute("attribute_name")`. For example:
+```java
+String value = element.getAttribute("value");
+```
+6. What is the difference between findElement and findElements? What does it return if it can't find?
+- findElement: Finds a single element. If the element is not found, it throws a NoSuchElementException.
+- findElements: Returns a list (all elements found). If no element is found, it returns an empty list.
+
+7. How to Get the Text of a Radio Button?
+
+1. If the Radio Button has its own text:
+- Use the `getText()` method.
+
+2. If the text is in another label or parent/child element, you can find the relevant element and get its text with `getText()`:
+```java
+String labelText = driver.findElement(By.xpath("//label[for='radioButtonId']")).getText();
+```

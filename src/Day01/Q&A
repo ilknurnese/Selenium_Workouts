@@ -1,0 +1,46 @@
+Selenium Questions and Answers
+1. How Many Types of Locators Are There in Selenium? In Which Order Do You Prefer?
+There are 8 types of locators in Selenium:
+1. id  (# is used to search in IDs)
+2. name
+3. className   (. is used to search in classes)
+4. tagName
+5. linkText
+6. partialLinkText
+7. cssSelector
+8. xpath
+
+Order of preference:
+- id: It is the fastest and most reliable option, it is unique.
+- name: It is preferred if it is unique and fixed.
+- cssSelector: It is faster than xpath in terms of performance.
+- xpath: It is more flexible but relatively slow.
+- Others are usually used in special cases.
+2. What is the Difference Between driver.quit and driver.close?
+- driver.quit: Closes all browser windows and ends the WebDriver session.
+- driver.close: Closes only the active browser window. However, other sessions continue to work.
+3. What is the difference between driver.navigate.to and driver.get?
+- driver.get: Redirects to a URL and waits for the page to fully load.
+- driver.navigate.to: Redirects to a URL in the same way, but offers more navigation controls (like back, forward, or refresh).
+
+4. What is the method to get the text of an element?
+- getText(): The `element.getText()` method returns the visible text value of an element.
+
+5. What is the method to get the attribute of an element?
+- getAttribute(): It is used as `element.getAttribute("attribute_name")`. For example:
+```java
+String value = element.getAttribute("value");
+```
+6. What is the difference between findElement and findElements? What does it return if it can't find?
+- findElement: Finds a single element. If the element is not found, it throws a NoSuchElementException.
+- findElements: Returns a list (all elements found). If no element is found, it returns an empty list.
+
+7. How to Get the Text of a Radio Button?
+
+1. If the Radio Button has its own text:
+- Use the `getText()` method.
+
+2. If the text is in another label or parent/child element, you can find the relevant element and get its text with `getText()`:
+```java
+String labelText = driver.findElement(By.xpath("//label[for='radioButtonId']")).getText();
+```

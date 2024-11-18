@@ -1,7 +1,6 @@
 CSS Selector
 
-tag[attributeName='value'][attributeName='value
-']
+tag[attributeName='value'][attributeName='value']
 div[id='cid_8'][type='text']  (tag optional)
 
 >  : çocuklarda aramak için kullanılır
