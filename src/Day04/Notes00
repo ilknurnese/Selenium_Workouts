@@ -106,4 +106,5 @@ java
 driver.findElement(By.cssSelector("button.submitButton[type='submit']")).click();
 
 
-These are some of the main CSS selector patterns in Selenium. By combining these techniques, you can create highly specific selectors for identifying elements on the page.
+These are some of the main CSS selector patterns in Selenium.
+By combining these techniques, you can create highly specific selectors for identifying elements on the page.

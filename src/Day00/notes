@@ -1,3 +1,7 @@
+Selenium is a widely adopted open-source automation testing framework
+that is designed to help users test web applications across various browsers and platforms.
+Selenium is not just a single tool but a set of tools that helps testers to automate web-based applications more efficiently.
+
 Selenium is an umbrella project for a range of tools and libraries that enable and support the automation of
 web browsers.
 
@@ -6,8 +10,6 @@ Selenium tool facilitates with a playback tool for authoring functional tests wi
 
 Selenium is one of the most widely used open source Web UI (User Interface) automation testing suites.
 Selenium supports automation across different browsers, platforms and programming languages.
-
-
 
 
 Selenium can be easily deployed on platforms such as Windows, Linux, Solaris and Macintosh.
@@ -189,9 +191,11 @@ Order of preference:
 - cssSelector: It is faster than xpath in terms of performance.
 - xpath: It is more flexible but relatively slow.
 - Others are usually used in special cases.
+
 2. What is the Difference Between driver.quit and driver.close?
 - driver.quit: Closes all browser windows and ends the WebDriver session.
 - driver.close: Closes only the active browser window. However, other sessions continue to work.
+
 3. What is the difference between driver.navigate.to and driver.get?
 - driver.get: Redirects to a URL and waits for the page to fully load.
 - driver.navigate.to: Redirects to a URL in the same way, but offers more navigation controls (like back, forward, or refresh).
