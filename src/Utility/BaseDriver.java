@@ -7,7 +7,7 @@ import java.time.Duration;
 
 public class BaseDriver {
 
-    //
+
     public static WebDriver driver;
 
     //public static void Setup()
@@ -15,7 +15,7 @@ public class BaseDriver {
     {
         driver=new ChromeDriver();
 
-        //driver.manage().window().maximize();
+        driver.manage().window().maximize();
         driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(20));
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(20));
 
