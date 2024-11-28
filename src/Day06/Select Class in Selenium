@@ -1,0 +1,112 @@
+
+Select Class in Selenium
+
+What is Select Class in Selenium?
+The Select class provides the implementation of the HTML SELECT tag.
+A Select tag provides the helper methods with select and deselect options.
+As Select is an ordinary class, its object is created by the keyword New and also specifies the location of the web element.
+
+Select Class Syntax in Selenium:
+
+Select select = new Select(WebElement webelement);
+Select objSelect = new Select();
+
+In the select class syntax above,
+it clearly states that Select class is asking for an element type object for its constructor,
+i.e it will create an object of the select class.
+
+The Select class constructor accepts one parameter:
+the WebElement object returned by the locators of the specified element.
+
+How to use Select Class in Selenium?
+Selenium allows you to select the option based on its text, index, and value, select multiple options, or deselect all.
+
+Different Select Class Methods to handle Select Dropdown in Selenium
+
+1. selectByVisibleText: selectByVisibleText(String arg0): void
+This select class method is used to select one of the options in a drop-down box or an option among multiple selection boxes.
+It takes a parameter of String which is one of the values of Select element and it returns nothing.
+
+Syntax:
+obj.Select.selectByVisibleText(“text”);
+
+Example:
+
+Select objSelect =new Select(driver.findElement(By.id("search-box")));
+objSelect.selectByVisibleText("Automation");
+
+2. selectByIndex: selectByIndex(int arg0) : void
+ the user has to provide the index number for the option.
+ It takes the integer parameter which is the index value of Select element and it returns nothing.
+
+Syntax:
+
+oSelect.selectByIndex(int);
+
+Example:
+
+Select objSelect = new Select(driver.findElement(By.id("Seacrch-box")));
+Select.selectByIndex(4);
+
+3. selectByValue: selectByValue(String arg0) : void
+This method asks for the value of the desired option.
+It takes a String parameter which is one of the values of Select element and it does not return anything.
+
+Syntax:
+
+oSelect.selectByValue(“text”);
+
+Example:
+
+Select objSelect = new Select(driver.findElement(By.id("Search-box")));
+objSelect.selectByValue("Automation Testing");
+
+4. getOptions: getOptions( ) : List<WebElement>
+This method gets all the options belonging to the Select tag.
+It takes no parameter and returns List<WebElements>.
+
+Syntax:
+
+oSelect.getOptions();
+
+Example:
+
+Select objSelect = new Select(driver.findElement(By.id("Search-box")));
+List <WebElement> elementCount = oSelect.getOptions();
+System.out.println(elementCount.size());
+
+5. deselectAll()
+This method clears all the selected entries. This is only valid when the drop-down element supports multiple selections.
+
+Syntax:
+
+objSelect.deselectAll();
+
+How to Select multiple items in Dropdown with the Select command?
+The multiple select attribute is a boolean expression.
+This method specifies that multiple options can be selected at once.
+These options vary for different operating systems and browsers.
+
+For Windows: Press the control (ctrl) button to select multiple options.
+For Mac: Hold down the command button to select multiple options.
+Use the isMultiple method to select multiple commands.
+
+isMultiple(): boolean – This method informs whether the Select element supports
+multiple selection options at the same time or not.
+This method accepts nothing and returns a boolean value (true/false).
+
+Syntax:
+
+objSelect.isMultiple();
+
+Example:
+
+Select objSelect = new Select(driver.findElement(By.id(Element_ID)));
+objSelect.selectByIndex(index);
+objSelect.selectByIndex(index);
+// Or can be used as
+objSelect.selectByVisibleText(text);
+objSelect.selectByVisibleText(text);
+// Or can be used as
+objSelect.selectByValue(value);
+objSelect.selectByValue(value);
