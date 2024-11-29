@@ -28,10 +28,18 @@ Due to the distribution of test execution across different environments, it can 
 Key Features of Selenium
 Here are some of the prominent features of Selenium that makes it so popular among testers and developers a like −
 
-Cross-browser Compatibility − You can use Selenium to execute tests on different browsers including Chrome, Firefox, Safari, and Internet Explorer. This ensures that your web application performs consistently across multiple platforms.
-Platform Independence − Selenium is not bound to any specific operating system. It can run on Windows, macOS, and Linux. Due to this platform independence, Selenium is the preferred choice for testing diverse applications.
-Support for Multiple Programming Languages − Selenium supports multiple programming languages including Java, Python, C#, Ruby, and JavaScript. This flexibility allows testers and developers to choose a language they are comfortable with.
-Extensibility − Selenium has features to enable users to incorporate additional functionalities through several plugins or extensions. One can easily customize Selenium to suit specific testing requirements.
+Cross-browser Compatibility −
+    You can use Selenium to execute tests on different browsers including Chrome, Firefox, Safari, and Internet Explorer.
+    This ensures that your web application performs consistently across multiple platforms.
+Platform Independence −
+    Selenium is not bound to any specific operating system. It can run on Windows, macOS, and Linux.
+    Due to this platform independence, Selenium is the preferred choice for testing diverse applications.
+Support for Multiple Programming Languages −
+    Selenium supports multiple programming languages including Java, Python, C#, Ruby, and JavaScript.
+    This flexibility allows testers and developers to choose a language they are comfortable with.
+Extensibility −
+    Selenium has features to enable users to incorporate additional functionalities through several plugins or extensions.
+    One can easily customize Selenium to suit specific testing requirements.
 
 
 
