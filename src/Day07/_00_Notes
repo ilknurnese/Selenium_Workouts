@@ -1,0 +1,142 @@
+Action Class in Selenium
+Action Class in Selenium is a built-in feature provided by the selenium
+for handling keyboard and mouse events.
+
+Action Class, actually it is not a class but an Interface.
+
+It includes various operations such as multiple events clicking by control key,
+drag and drop events and many more.
+These operations from the action class are performed using
+ the advanced user interaction API in Selenium Webdriver.
+
+_________________________
+
+Methods in Actions class of Selenium
+There are a lot of methods in this class which can be categorized into two main categories:
+
+Keyboard Events
+Mouse Events
+
+Different Methods for performing Keyboard Events:
+
+keyDown(modifier key): Performs a modifier key press.
+sendKeys(keys to send ): Sends keys to the active web element.
+keyUp(modifier key): Performs a modifier key release.
+
+Different Methods for performing Mouse Events:
+
+click(): Clicks at the current mouse location.
+doubleClick(): Performs a double-click at the current mouse location.
+contextClick() : Performs a context-click at middle of the given element.
+clickAndHold(): Clicks (without releasing) in the middle of the given element.
+dragAndDrop(source, target): Click-and-hold at the location of the source element, moves to the location of the target element
+dragAndDropBy(source, xOffset, yOffset):  Click-and-hold at the location of the source element, moves by a given offset
+moveByOffset(x-offset, y-offset): Moves the mouse from its current position (or 0,0) by the given offset
+moveToElement(toElement): Moves the mouse to the middle of the element
+release(): Releases the depressed left mouse button at the current mouse location
+
+To see the complete list of all methods visit https://seleniumhq.github.io/selenium/docs/api/java/org/openqa/selenium/interactions/Actions.html
+
+
+______________________________________________________
+ Method	Description
+ clickAndHold()	Clicks (without releasing) at the current mouse location.
+ contextClick()	Performs a context-click at the current mouse location. (Right Click Mouse Action)
+ doubleClick()	Performs a double-click at the current mouse location.
+ dragAndDrop(source, target)	Performs click-and-hold at the location of the source element, moves to the location of the target element, then releases the mouse.
+    Parameters:
+
+    source- element to emulate button down at.
+
+    target- element to move to and release the mouse at.
+
+ dragAndDropBy(source, x-offset, y-offset)	Performs click-and-hold at the location of the source element, moves by a given offset, then releases the mouse.
+     Parameters:
+
+        source- element to emulate button down at.
+
+       xOffset- horizontal move offset.
+
+    yOffset- vertical move offset.
+
+ keyDown(modifier_key)	Performs a modifier key press. Does not release the modifier key – subsequent interactions may assume it’s kept pressed.
+        Parameters:
+
+        modifier_key – any of the modifier keys (Keys.ALT, Keys.SHIFT, or Keys.CONTROL)
+
+ keyUp(modifier _key)	Performs a key release.
+ Parameters:
+
+ modifier_key – any of the modifier keys (Keys.ALT, Keys.SHIFT, or Keys.CONTROL)
+
+ moveByOffset(x-offset, y-offset)	Moves the mouse from its current position (or 0,0) by the given offset.
+    Parameters:
+
+    x-offset- horizontal offset. A negative value means moving the mouse left.
+
+    y-offset- vertical offset. A negative value means moving the mouse down.
+
+ moveToElement(toElement)	Moves the mouse to the middle of the element.
+    Parameters:
+
+    toElement- element to move to.
+
+ release()	Releases the depressed left mouse button at the current mouse location
+ sendKeys(onElement, charsequence)	Sends a series of keystrokes onto the element.
+    Parameters:
+
+    onElement – element that will receive the keystrokes, usually a text field
+
+     charsequence – any string value representing the sequence of keystrokes to be sent
+
+
+
+Step 1) Import the Actions and Action classes.
+
+import org.openqa.selenium.interactions.Action;
+import org.openqa.selenium.interactions.Actions;
+
+Step 2) Instantiate a new Actions object.
+
+Actions builder=new Actions(driver);
+
+Step 3) Instantiate an Action using the Actions object in step 2.
+
+Action mouseOverHome=builder
+                        .moveToElement(linkHome)
+                        .build();
+
+In this case, we are going to use the moveToElement() method because
+we are simply going to mouse-over the “Home” link.
+The build() method is always the final method used so that
+all the listed actions will be compiled into a single step.
+
+Step 4) Use the perform() method when executing the Action object we designed in Step 3.
+
+mouseOverHome.perform();
+
+
+_________________________________
+
+
+public static void main(String[] args) {
+String baseUrl = "http://www.facebook.com/";
+WebDriver driver = new FirefoxDriver();
+
+driver.get(baseUrl);
+WebElement txtUsername = driver.findElement(By.id("email"));
+
+Actions builder = new Actions(driver);
+Action seriesOfActions = builder
+	.moveToElement(txtUsername)
+	.click()
+	.keyDown(txtUsername, Keys.SHIFT)
+	.sendKeys(txtUsername, "hello")
+	.keyUp(txtUsername, Keys.SHIFT)
+	.doubleClick(txtUsername)
+	.contextClick()
+	.build();
+
+seriesOfActions.perform() ;
+
+}
